@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+#pour enmpeche de se connecter aux autres pages
+  before_action :authenticate_user!
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
